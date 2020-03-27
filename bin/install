@@ -19,7 +19,7 @@ install_kubectl() {
 
   local bin_path="${bin_install_path}/kapp"
   echo "Downloading kubectl from ${download_url}"
-  curl -s "$download_url" -o "$bin_path"
+  curl -s -L "$download_url" -o "$bin_path"
   chmod +x $bin_path
 }
 
